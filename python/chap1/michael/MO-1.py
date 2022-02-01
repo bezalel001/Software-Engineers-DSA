@@ -8,9 +8,12 @@ Find average of all the elements in a list.
 
 
 def avg(elements):
-  return sum(elements) / len(elements)
+  if len(elements) > 0:
+    average = sum(elements) / len(elements)
+    return round(average, 2)
+  return None
 
 if __name__ == '__main__':
-  numbers = [2, 45, 89, 12, 4, 7, 19]
+  numbers = [1, 3, 4, 5, 6, 6]
   average = avg(numbers)
-  print(f'Average: {round(average, 2)}')
+  print(f'Average: {average}')
